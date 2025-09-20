@@ -4,6 +4,7 @@ body {
   background-color: #e0bbe4;
   padding: 0;
   margin: 0;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
 .hero {
@@ -49,15 +50,14 @@ body {
   width: 0%;
   white-space: nowrap;
   overflow: hidden;
-
   animation: typing 2s steps(14), cursor 0.4s step-end infinite alternate;
   animation-delay: 2s;
   animation-fill-mode: forwards;
   color: #ffffff;
-  font-size: 110px;
-  letter-spacing: 3px;
-  margin-block-start: 60px;
-  margin-block-end: 60px;
+  font-size: 75px;
+  letter-spacing: 2px;
+  margin-block-start: 35px;
+  margin-block-end: 35px;
 }
 
 .in-container .i {
@@ -134,7 +134,7 @@ body {
 }
 
 .container-cotton font {
-  font-size: 120px;
+  font-size: 80px;
   margin-right: 10px;
   font-weight: 900;
   color: white;
@@ -155,6 +155,8 @@ body {
   width: 400px;
   margin-left: 70%;
   border-radius: 20px;
+  max-width: 100%;
+  height: auto;
 }
 
 .container-lum video {
@@ -169,6 +171,8 @@ body {
   left: 37%;
   top: 40%;
   transform: rotate(-20deg);
+  max-width: 50%;
+  height: auto;
 }
 
 .container-lum p {
@@ -192,6 +196,7 @@ body {
   cursor: pointer;
   opacity: 1;
   transition: opacity 0.5s;
+  box-sizing: border-box;
 }
 
 .card.fade-out {
@@ -202,6 +207,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
+  gap: 20px;
 }
 
 .card h2 {
@@ -243,4 +249,304 @@ body {
   width: 70%;
   height: 400px;
   margin-left: 15%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Hacer videos responsive */
+iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablets (768px y menos) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 6% 8%;
+  }
+
+  .in-container .hey {
+    font-size: 24px;
+  }
+
+  .in-container .hap {
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin-block-start: 25px;
+    margin-block-end: 25px;
+  }
+
+  .in-container .i,
+  .in-container .so {
+    font-size: 20px;
+  }
+
+  .container-cotton,
+  .container-lum,
+  .container,
+  .container-lavender {
+    padding: 12% 8%;
+  }
+
+  .container-cotton p,
+  .container p,
+  .container-lum p {
+    font-size: 20px;
+  }
+
+  .container-cotton font {
+    font-size: 50px;
+  }
+
+  .clock-holder {
+    margin: 40px 0;
+  }
+
+  .bori {
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+  }
+
+  .love {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 60%;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    min-height: 250px;
+    padding: 30px;
+  }
+
+  .card h2 {
+    font-size: 35px;
+  }
+
+  .card font {
+    font-size: 60px;
+    margin-top: 60px;
+  }
+
+  .cake {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .trans-p-c,
+  .trans-l-p,
+  .trans-p-la,
+  .trans-c-l {
+    height: 100px;
+  }
+}
+
+/* Móviles (480px y menos) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 4% 5%;
+  }
+
+  .in-container .hey {
+    font-size: 20px;
+  }
+
+  .in-container .hap {
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+  }
+
+  .in-container .i,
+  .in-container .so {
+    font-size: 16px;
+    white-space: normal;
+    overflow: visible;
+    width: auto;
+    border: none;
+    animation: none;
+  }
+
+  .container-cotton,
+  .container-lum,
+  .container,
+  .container-lavender {
+    padding: 8% 5%;
+  }
+
+  .container-cotton p,
+  .container p,
+  .container-lum p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .container-cotton font {
+    font-size: 35px;
+    margin-right: 5px;
+  }
+
+  .clock-holder {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  .bori {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .love {
+    width: 80%;
+    margin: 15px auto;
+  }
+
+  .card {
+    width: 95%;
+    padding: 20px;
+    min-height: 200px;
+  }
+
+  .card h2 {
+    font-size: 28px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .card font {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+
+  .cake {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  .trans-p-c,
+  .trans-l-p,
+  .trans-p-la,
+  .trans-c-l {
+    height: 60px;
+  }
+
+  .birthday-wishes {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media screen and (max-width: 320px) {
+  .hero {
+    padding: 3% 3%;
+  }
+
+  .in-container .hey {
+    font-size: 18px;
+  }
+
+  .in-container .hap {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-block-start: 18px;
+    margin-block-end: 18px;
+  }
+
+  .container-cotton,
+  .container-lum,
+  .container,
+  .container-lavender {
+    padding: 6% 3%;
+  }
+
+  .container-cotton font {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .card font {
+    font-size: 40px;
+  }
+
+  iframe {
+    height: 180px;
+  }
+}
+
+/* Pantallas grandes (1200px y más) */
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 8% 20%;
+  }
+
+  .container-cotton,
+  .container-lum,
+  .container,
+  .container-lavender {
+    padding: 16% 20%;
+  }
+
+  .card-container {
+    max-width: 1000px;
+    margin: 60px auto 0;
+  }
+
+  .bori {
+    height: 600px;
+    width: 450px;
+  }
+
+  iframe {
+    width: 700px;
+    height: 400px;
+  }
 }

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Feliz cumpleaños!!!</title>
+</head>
+<body>
+    <!-- Protección de autenticación -->
+    <script>
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = './index.html';
+        }
+        
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('loginTime');
+            window.location.href = './index.html';
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoutBtn = document.createElement('button');
+            logoutBtn.innerHTML = '🚪 Cerrar Sesión';
+            logoutBtn.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: rgba(255, 255, 255, 0.9);
+                border: 2px solid #ff69b4;
+                border-radius: 25px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-family: 'Comfortaa', sans-serif;
+                font-weight: bold;
+                color: #ff69b4;
+                z-index: 1000;
+                transition: all 0.3s ease;
+            `;
+            logoutBtn.onmouseover = function() {
+                this.style.background = '#ff69b4';
+                this.style.color = 'white';
+            };
+            logoutBtn.onmouseout = function() {
+                this.style.background = 'rgba(255, 255, 255, 0.9)';
+                this.style.color = '#ff69b4';
+            };
+            logoutBtn.onclick = logout;
+            document.body.appendChild(logoutBtn);
+        });
+    </script>
+    <section id="one">
+        <div class="hero">
+            <div class="in-container">
+                <p class="hey">
+                    Hola preciosa
+                </p>
+            </div>
+            <div class="in-container">
+                <p class="hap">
+                    Feliz cumpleaños!!!
+                </p>
+            </div>
+            <div class="in-container">
+                <p class="i">
+                    No tenia dinero para un regalo bonito
+                </p>
+            </div>
+            <div class="in-container">
+                <p class="so">
+                    Asi que... te hice esta pagina.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="trans-p-c">
+
+    </div>
+    <section class="two">
+        <div class="container-cotton">
+            <p>
+                Han pasado exactamente
+            </p>
+            <div class="clock-holder">
+                <font id="days"></font>
+                <font>:</font>
+                <font id="hours"></font>
+                <font>:</font>
+                <font id="minutes"></font>
+                <font>:</font>
+                <font id="seconds"></font>
+            </div>
+            <p>
+                Desde que te vi por primera vez, y solo podia pensar en lo enojada que debias estar,
+            </p>
+            <p>
+                Eso no quita lo bonita te veias ese dia.
+            </p>
+        </div>
+    </section>
+    <div class="trans-c-l">
+
+    </div>
+    <section id="three">
+        <div class="container-lum">
+            <img src="./madii&yoV2.com.jpg" alt="" class="bori"/>
+            <img src="./vecteezy_black-heart-line-png-file_20945974_746.png" alt="" class="love"/>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/g4ZmSLgjL44?si=NL-D9Sie8JEtKmw9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="container-lum">
+            <p>
+                "No quiero arrepentirme de nada, quiero vivir cada momento contigo, que me conozcas, a tu lado disfrutar la luz de cada mañana, la melodía de cada música y el suspiro de cada latir en mi corazón."
+                <br/><br/> — yop
+                            </p>
+        </div>
+    </section>
+    <div class="trans-l-p">
+
+    </div>
+    <section id="four">
+        <div class="container">
+            <p>
+                Escogi esta cancion para ti.<br/><br/>
+                Juega y sigue desplazándote amor. Te espera una sorpresa....
+            </p>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yXElRn0UD_I?si=YBQVpOY2VXsopgDn&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>
+                Iris - Goo Goo Dolls
+            </p>
+        </div>
+        <div class="container">
+            <p>
+                Cada carta tiene sorpresas únicas. Sólo puedes elegir una.<br/>
+                Así que, elige con cuidado bebé...
+            </p>
+            <div class="card-container">
+                <div class="card" onclick="cardSelected(this)">
+                    <h2>
+                        Masaje
+                    </h2>
+                    <p>
+                        Masajeador personal cuando quieras.
+                    </p>
+                    <font>
+                        ?
+                    </font>
+                </div>
+                <div class="card" onclick="cardSelected(this)">
+                    <h2>
+                        Cocinero
+                    </h2>
+                    <p>
+                        Seré tu chef personal y cocinaré lo que quieras (espero no morir en el intento).
+                    </p>
+                    <font>
+                        ?
+                    </font>
+                </div>
+                <div class="card" onclick="cardSelected(this)">
+                    <h2>
+                        Mayordomo
+                    </h2>
+                    <p>
+                        Para lo que quieras estoy a tu servicio, mi amor.
+                    </p>
+                    <font>
+                        ?
+                    </font>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trans-p-la">
+
+    </div>
+    <section id="five">
+        <div class="container-cotton">
+            <p class="birthday-wishes">
+                ¡Feliz cumpleaños, mi amor! 🎉🎂 <br/><br/>
+
+                Aunque nuestro camino juntos comenzó hace poco, cada instante a tu lado ha sido mágico y lleno de alegría. Tu sonrisa ilumina mis días y tu presencia ha transformado mi mundo de una manera que nunca imaginé.<br/><br/>
+                Desde el primer momento en que te vi, supe que había encontrado a alguien especial. Tus palabras, tus gestos y esa chispa en tus ojos han hecho que me enamore más cada día. En este corto tiempo, hemos creado recuerdos inolvidables que atesoro en lo más profundo de mi corazón.<br/><br/>
+                En tu día especial, quiero desearte toda la felicidad del mundo. Que cada uno de tus sueños se haga realidad y que este nuevo año de vida te brinde tantas bendiciones como las que tú has traído a mi vida. Estoy emocionado por todas las aventuras que nos esperan y por seguir construyendo juntos esta hermosa historia.<br/><br/>
+                Gracias por ser tú, por compartir tu esencia conmigo y por permitirme ser parte de tu vida. Celebremos este día con la promesa de muchos más momentos juntos. Te quiero con todo mi corazón.<br/><br/>
+                ¡Feliz cumpleaños, mi vida! 🎈❤️🥳
+            </p>
+        </div>
+        <div class="container-cotton">
+            <p>
+                Hago la mejor tarta que puedas encontrar, ¡sólo para ti!<br/>
+                Sopla la vela amor...<br/><br/>
+                vamos, bebé<br/>
+                Es tu cumpleaños.<br/>
+            </p>
+            <img src="./pastelMadi.jpg" alt="" class="cake"/>
+
+            <p>
+                ¡Así es! A partir de ahora eres madi.
+            </p>
+        </div>
+        <div class="container-cotton">
+            <p>
+                Hecho para ti con el ❤ de parte de Juan
+            </p>
+        </div>
+    </section>
+
+    <script src="./main.js"></script>
+</body>
+</html>
